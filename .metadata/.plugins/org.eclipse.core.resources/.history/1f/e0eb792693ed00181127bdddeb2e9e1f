@@ -1,0 +1,18 @@
+package testFolder;
+
+
+
+public class test {
+
+	public static void main(String[] args) throws IOException {
+		// TODO Auto-generated method stub
+
+		AsciiBasicControl ascii = new AsciiBasicControl("C:\\北科\\軒哥\\海棠颱風\\Scale1_Output27\\");
+		station s = new station();
+
+		String temp = "";
+		temp = ascii.getValue(Double.parseDouble(s.Sensor2[0][1]), Double.parseDouble(s.Sensor2[0][2]));
+		System.out.println(temp);
+
+	}
+}

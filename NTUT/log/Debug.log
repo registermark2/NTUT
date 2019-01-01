@@ -1,0 +1,10 @@
+[2018/12/07 19:58:12][DEBUG] (FileUtils:1471) : Open file for read C:\Users\ANDY\Desktop\Kao_Z1_Rainfall.xml
+[2018/12/07 19:58:12][DEBUG] (FileUtils:1511) : File read in 0.6s IO 0.1s 6.7 MB 50 MB/s C:\Users\ANDY\Desktop\Kao_Z1_Rainfall.xml
+[2018/12/07 20:01:35][DEBUG] (FileUtils:1471) : Open file for read C:\Users\ANDY\Desktop\Kao_Z1_Rainfall.xml
+[2018/12/07 20:01:35][DEBUG] (FileUtils:1511) : File read in 0.2s IO 0.0s 6.7 MB 470 MB/s C:\Users\ANDY\Desktop\Kao_Z1_Rainfall.xml
+[2018/12/07 20:10:59][DEBUG] (FileUtils:1471) : Open file for read C:\北科\專題生\Rainfall\Kao_Z2_Rainfall.xml
+[2018/12/07 20:10:59][DEBUG] (FileUtils:1511) : File read in 0.2s IO 0.0s 3.6 MB 373 MB/s C:\北科\專題生\Rainfall\Kao_Z2_Rainfall.xml
+[2018/12/07 20:11:08][DEBUG] (FileUtils:1471) : Open file for read C:\北科\專題生\Rainfall\Kao_Z3_Rainfall.xml
+[2018/12/07 20:11:08][DEBUG] (FileUtils:1511) : File read in 0.2s IO 0.0s 4.3 MB 378 MB/s C:\北科\專題生\Rainfall\Kao_Z3_Rainfall.xml
+[2018/12/07 20:11:19][DEBUG] (FileUtils:1471) : Open file for read C:\北科\專題生\Rainfall\Kao_Z4_Rainfall.xml
+[2018/12/07 20:11:20][DEBUG] (FileUtils:1511) : File read in 0.3s IO 0.0s 6.6 MB 494 MB/s C:\北科\專題生\Rainfall\Kao_Z4_Rainfall.xml

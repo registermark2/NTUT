@@ -1,0 +1,41 @@
+package testFolder;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.List;
+import java.util.NoSuchElementException;
+//import java.util.stream.Collector;
+import java.util.stream.Collectors;
+
+public class CompareFunction {
+	Double rdata, min;
+
+	public Double getCloseValue(List<Double> list, Double compareNumber) {
+//		Double temp =list.stream().min(Comparator.comparingDouble(i ->Math.abs(i-compareNumber))).get();
+//		if(temp <= rdata) {
+//			min=temp;  
+//		}
+//		
+//		return min;
+		for (int i = 0; i < list.size(); i++) {
+			
+			Double a = compareNumber;
+			Double b = Math.abs(a - list.get(i));
+			System.out.println(a[i]);
+			if (b[i] < b[min])
+				min = i;
+		}
+	}
+}
+
+//List<Double> list = Arrays.stream(numbers).collect(Collectors.toList());
+
+//Double result = list.stream().min(Comparator.comparingDouble(i -> Math.abs(i - compareNumber))).get();
+//				.orElseThrow(() -> new NoSuchElementException("No value present"));
+//list.parallelStream().min(Comparator.comparingDouble(i -> Math.abs(i - compareNumber)))
+
+//list.stream().min(Comparator.comparingDouble(i ->Math.abs(i-compareNumber))).get();
+
+//list.stream().min(Comparator.comparingDouble(i ->Math.abs(i-compareNumber))).get();
+//

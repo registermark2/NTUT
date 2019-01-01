@@ -1,0 +1,28 @@
+package Writing.Excel;
+
+import java.io.File;
+import java.io.IOException;
+
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.Workbook;
+
+public class writeExcel {
+	public void writeExcel() {
+		File f = new File("table01.xls");
+		try {
+			Workbook book = Workbook.getWorkbook(f);//
+			Sheet sheet = book.getSheet(0); // 獲得第一個工作表對象
+			for (int i = 0; i < sheet.getRows(); i++) {
+				for (int j = 0; j < sheet.getColumns(); j++) {
+					Cell cell = sheet.getCell(j, i); // 獲得單元格
+					System.out.print(cell.getContents() + " ");
+				}
+				System.out.print("\n");
+			} 
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+}

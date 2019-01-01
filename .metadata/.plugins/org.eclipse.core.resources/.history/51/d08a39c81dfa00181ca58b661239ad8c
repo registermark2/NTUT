@@ -1,0 +1,91 @@
+package testFolder;
+
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.ReadOnlyFileSystemException;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Scanner;
+import java.util.stream.Collectors;
+
+import Global.station;
+import asciiFunction.AsciiBasicControl;
+import usualTool.AtFileReader;
+import usualTool.AtFileReaderExtend;
+import testFolder.CompareFunction;
+
+public class test {
+	
+
+	public static void main(String[] args) throws IOException {
+		// TODO Auto-generated method stub
+		System.out.println("請給兩個路徑 1.SensorFilePath  2.AsciiFilePath   記得不要符號，且斜線為\\即可");
+		Scanner input = new Scanner(System.in);
+		String SensorCoordinateFilePath = input.next();
+		String AsciiFilePath = input.next();
+		String SensorFilePath = input.next();
+		
+			
+		AtFileReaderExtend ar = new AtFileReaderExtend(SensorCoordinateFilePath,AtFileReaderExtend.UTF8);
+		Map<String, String[]> map = new HashMap<>();
+		
+		for(int i=1;i<ar.getCsv().length;i++) {
+			String[] temp = {ar.getCsv()[i][0], ar.getCsv()[i][1], ar.getCsv()[i][2]};
+			map.put(ar.getCsv()[i][0], temp);
+		}//store station coordinate
+		
+		AtFileReaderExtend Sensorar = new AtFileReaderExtend(SensorFilePath,AtFileReaderExtend.UTF8);
+		Map<String, String[]> Sensormap = new HashMap<>();
+		
+		for(int i=0;i<Sensorar.getCsv().length;i++) {
+			for(int w=0;w<23;w++) {
+				String[] temp = {""};
+				temp[0] = Sensorar.getCsv()[i][w];
+				Sensormap.put(ar.getCsv()[i][0], temp);
+			}
+		}
+		for (Object key : Sensormap.keySet()) {
+            System.out.println(key + " : " + map.get(key));
+        }
+		
+		
+//		String folderParentPath = AsciiFilePath;
+//		File folder = new File(folderParentPath);
+//		String[] AsciiNamelist = folder.list(); 
+//		readStation rs = new readStation();
+//		
+//		Double compareNumber =0.02;
+//		
+//		for (String StationName : map.keySet()) {
+//		    String[] StationCoordinate = map.get(StationName); 
+//			System.out.println("StationName: "+ StationName );
+//			for(int AsciiTimeSequence = 0; AsciiTimeSequence < AsciiNamelist.length; AsciiTimeSequence++){
+//				List<String> roundersData = rs.readStation(folderParentPath, AsciiNamelist, AsciiTimeSequence, StationCoordinate);	
+////				System.out.println("String: "+roundersData);
+//				//				Give data to compare function , add result to list  
+//				List<Double> DoubleRounder = roundersData.stream().map(s ->  Double.parseDouble(s)).collect(Collectors.toList());//convert
+////				System.out.println("result: "+DoubleRounder);
+//				
+//				
+//				CompareFunction cf = new CompareFunction();
+//				Double show = cf.getCloseValue(DoubleRounder, compareNumber);
+////				System.out.println(AsciiTimeSequence+ " 最近值 : "+show);
+//				
+//			}
+//		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
