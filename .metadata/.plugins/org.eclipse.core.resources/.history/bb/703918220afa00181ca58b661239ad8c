@@ -1,7 +1,0 @@
-package Writing.Excel;
-
-public class writeExcel {
-	public void writeExcel() {
-		
-	}
-}

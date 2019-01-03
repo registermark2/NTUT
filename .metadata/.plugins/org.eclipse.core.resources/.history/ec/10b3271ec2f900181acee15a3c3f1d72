@@ -1,7 +1,0 @@
-package testFolder;
-
-public class readT {
-	public void test() {
-		
-	}
-}
